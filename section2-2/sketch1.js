@@ -17,7 +17,7 @@ function setup() {
     else {
       strokeWeight(5)
     }
-    let x = i*10+10
+    let x = (i+1)*10;
     line(x, 0, x, 100);
   }
 }
