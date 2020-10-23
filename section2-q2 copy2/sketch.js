@@ -9,7 +9,7 @@ function setup() {
         fill(255);
       }
       else if (i % 2 == 1 || j % 2 == 1){
-        fill(130);
+        fill(204);
       }
       else{
         fill(255);
