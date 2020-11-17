@@ -6,7 +6,7 @@ function setup(){
   background(255);
   let bc = color(247, 167, 5);
   let tc = color(0);
-  balloon("成人式・同窓会が開催されますように", 70, 40, bc, tc);
+  balloon("成人式・同窓会が開催されますように", 40, 60, bc, tc);
 }
 
 function balloon(t, x, y, bc, tc){
@@ -16,7 +16,7 @@ function balloon(t, x, y, bc, tc){
   fill(bc);
   noStroke();
   rect(x, y, w + p * 2, h + p * 4);
-  triangle(x + p * 2, y + h + p * 4, x + p * 5 / 2, y + h + p * 8, x + p * 4, y + h + p * 4);
+  triangle(x + w / 5, y + h + p * 4, x + w / 4, y + (h + p * 2) * 2 , x + w / 3, y + h + p * 4);
   fill(tc);
   text(t, x + p, y + h + p);
 }
