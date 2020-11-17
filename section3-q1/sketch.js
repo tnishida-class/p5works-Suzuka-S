@@ -4,15 +4,19 @@
 function setup(){
   createCanvas(400, 400);
   background(255);
-  balloon("I love keyakizaka46");
+  let bc = color(247, 167, 5);
+  let tc = color(0);
+  balloon("成人式・同窓会が開催されますように", 70, 40, bc, tc);
 }
 
-function balloon(t){
+function balloon(t, x, y, bc, tc){
   let w = textWidth(t);
   let h = textAscent() + textDescent();
-  let p = 2;
-  fill(0);
-  rect(0, 0, w + p * 2, h + p * 2);
-  fill(255);
-  text(t, p, h + p);
+  let p = 6;
+  fill(bc);
+  noStroke();
+  rect(x, y, w + p * 2, h + p * 4);
+  triangle(x + p * 2, y + h + p * 4, x + p * 5 / 2, y + h + p * 8, x + p * 4, y + h + p * 4);
+  fill(tc);
+  text(t, x + p, y + h + p);
 }
