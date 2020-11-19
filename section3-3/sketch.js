@@ -1,7 +1,7 @@
 // テキスト「関数を作る(2) 値を戻す関数」～「総仕上げ：カレンダーを描画しよう」
 function setup(){
   createCanvas(200, 200);
-  calendar(2019, 10);
+  calendar(2020, 10);
 
   for(let i = 2000; i <= 2100; i++){
     if(isLeapYear(i)){
@@ -25,8 +25,8 @@ function isLeapYear(y){
 }
 
 function daysInYear(y){
-  // BLANK[1]
-}
+  return isLeapYear(y) ? 365 : 366;
+  }
 
 function daysInMonth(y, m){
   if(m == 2){
