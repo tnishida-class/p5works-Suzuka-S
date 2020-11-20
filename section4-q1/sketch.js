@@ -3,7 +3,7 @@ let count;
 let cycle;
 let size;
 
-let tx1 = width / 3 + 50;
+// let tx1;
 // let tx2;
 // let tx3;
 // let ty1;
