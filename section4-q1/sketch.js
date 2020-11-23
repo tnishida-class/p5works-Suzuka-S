@@ -3,13 +3,6 @@ let count;
 let cycle;
 let size;
 
-// let tx1;
-// let tx2;
-// let tx3;
-// let ty1;
-// let ty2;
-// let ty3;
-
 function setup(){
   createCanvas(400, 400);
   count = 0;
@@ -25,5 +18,10 @@ function draw(){
   else if(count > 40 && count < 50){size++;}
   else {size--;}
   size = constrain(size, 50, 101);
+  fill(255);
   ellipse(width / 2, height / 2, size);
+  if(keyIsDown("A".charCodeAt(0))){
+    count += 5;
+   }
+  }
 }
