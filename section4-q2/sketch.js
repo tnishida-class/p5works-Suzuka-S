@@ -7,13 +7,14 @@ function setup(){
   y = height / 2;
   vx = 8;
   vy = 8;
+  r = 30;
   angle = 0;
 }
 
 function draw(){
   background(160, 192, 255);
   // BLANK[2] (hint: 作った star 関数を使います)
-  star(x, y, 30, angle);
+  star(x, y, r, angle);
   x -= vx;
   y += vy;
   angle += TWO_PI / 50;
@@ -36,6 +37,13 @@ function star(cx, cy, r, angle){
     vertex(x,y);
   }
   endShape(CLOSE);
+}
+
+function mouseClicked(){ //クリックしたら星が大きくなる
+  r = 60;
+}
+function doubleClicked(){ //ダブルクリックしたら星の大きさが元に戻る
+  r = 30;
 }
 
 function windowResized(){
